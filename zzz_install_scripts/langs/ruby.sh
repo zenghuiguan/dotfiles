@@ -32,6 +32,7 @@ if [[ ! -f "$RUBY_DIR/bin/ruby" ]]; then
     fi
 
     if [[ "$ADD_TO_SYSTEM_PATH" = true ]]; then
+        source $RC_FILE
         cat <<EOT >>"$RC_FILE"
 alias ruby='~/tools/ruby/bin/ruby'
 export PATH="$PATH:$HOME/tools/ruby/bin"
